@@ -13,8 +13,8 @@
     leaveBalance: 25,
     activeTab: 'calendar',
     curatedPlan: JSON.parse(localStorage.getItem('OFFSITE_CURATED_PLAN') || 'null'),
-    currentYear: 2024,
-    currentMonthIdx: 9, // October (0-indexed = September, so 9 = October)
+    currentYear: 2026,
+    currentMonthIdx: 7, // august (0-indexed = September, so 7 = aug)
   };
 
   // ==========================================
@@ -773,7 +773,7 @@
     const datePrompt = `You are a precise office calendar parser. 
 Analyze this user text description: "${unstructuredText}"
 Extract all the specific offsite leave dates mentioned. 
-The current workspace calendar is set around October to December 2024. If year or month is ambiguous, assume 2024.
+The current workspace calendar is set around August to December 2026. If year or month is ambiguous, assume 2026.
 Return a structured JSON list of matching dates in "YYYY-MM-DD" format.
 Only return a JSON object following this exact schema:
 {
@@ -900,7 +900,7 @@ Return ONLY a valid JSON object matching the following structure (no backticks o
   "days": [
     {
       "dayNum": "DAY 01",
-      "dateString": "2024-10-12",
+      "dateString": "2026-10-13",
       "dayTitle": "Concrete Poetics & Local Eats",
       "strategyText": "Transition from urban congestion to garden parks.",
       "activities": [
